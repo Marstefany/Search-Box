@@ -1,0 +1,62 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #7165e4aa;
+}
+/* Container da caixa de pesquisa */
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+/* Caixa da barra de pesquisa */
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+/* Barra de pesquisa */
+.search-box input[type="text"] {
+    width: 0;
+    opacity: 0;
+    padding: 0;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    height: 40px;
+    outline: none;
+    padding: 0 10px;
+    transition: width 0.4s ease, opacity 0.4s ease;
+}
+/* Ícone de pesquisa */
+.search-box .icon {
+    background-color: #7165e4aa;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* Mudar cor do ícone ao passar o mouse */
+.search-box .icon:hover {
+    background-color: #554bafaa;
+}
+/* Quando o checkbox está marcado, expande a barra de pesquisa */
+#check:checked ~ input[type="text"] {
+    width: 300px;
+    opacity: 1;
+}
+/* Escondeo checkbox, que é apenas um controle para rodar a animação */
+#check {
+    display: none;
+}
